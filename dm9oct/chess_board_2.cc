@@ -9,7 +9,7 @@ int main(){
         for (int j = 0; j < c; ++j){
             char n;
             cin >> n;
-            t += n - '0';
+            if ((i+j)%2 == 0) t += n - '0';
         }
         
     }
