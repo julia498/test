@@ -2,7 +2,7 @@
 using namespace std;
 
 double exp (double a, int b) {
-	double i=0, t = 1;
+	int i=0, t = 1;
 	if (b == 0) return 1;
 	while (b > i) {
 		t *= a;
@@ -18,9 +18,11 @@ int main (){
 	
 	double x, c, i = 0, t = 0;
 	cin >> x;
+    double a = 1;
 	while (cin >> c) {
-		t = t + c*exp(x, i);
+		t += c*a;
 		++i;
+        a *= x;
 	}
 	
 	cout << t << endl;
