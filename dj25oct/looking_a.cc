@@ -9,6 +9,7 @@ int main(){
         if (n == 'a'){
             found = true;
             cout << "yes" << endl;
+        }
     }
     
 }
