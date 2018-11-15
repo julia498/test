@@ -7,6 +7,6 @@ using namespace std;
 int main() {
     int n, a;
     cin >> n;
-    vector<int> v(1001);
-
+    vector<int> v(1001, 0);
+    
 }
