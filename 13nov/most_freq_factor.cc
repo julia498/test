@@ -15,7 +15,7 @@ void factor(int n, int& f, int& q) {
     
     if (is_prime(n)) f = n;
     
-    else {
+    else { 
         for (int i=2; i*i <= n; ++i) {
             int b=0;
             while (n%i == 0) {
