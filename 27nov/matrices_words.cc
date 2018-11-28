@@ -9,11 +9,9 @@ int number_of_words(const Matrix& m, char c, int k){
     int t=0;
     for (int i=0; i < n; ++i) {
         for (int j=0; j < (int)m[i].size(); ++j){
-            string s = m[i][j];
-            int mida_str = s.size();
-            if (mida_str-1 >= k){
-                if (s[k] == c) ++t;
-            }
+			if (k < (int)m[i][j].size()) {
+				if (m[i][j][k] == c) ++t;
+			}
         }
     }
     return t;

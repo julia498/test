@@ -3,6 +3,16 @@ using namespace std;
 #include <vector>
 typedef vector< vector<string> > Matriu;
 
+char qui_guanya(const vector<string>& A, const vector<string>& B) {
+	for (int i=0; i < 5; ++i) {
+		if ( A[i][(int)A[i].size()-1] != B[i][0] ) return 'A';
+		if (i != 4) {
+			if ( B[i][(int)B[i].size()-1] != A[i+1][0] ) return 'B';
+		}
+	}
+	return '=';
+}
+
 int main () {
     int n;
     cin >> n;
@@ -16,6 +26,6 @@ int main () {
             cin >> s;
             B.push_back(s);
         }
-        
+        cout << qui_guanya(A, B) << endl;
     }
 }
