@@ -3,6 +3,11 @@ using namespace std;
 #include <vector>
 typedef vector< vector<string> > Matriu;
 
+char domino(const Matriu& m) {
+    for(int i=0; 
+}
+
+
 int main () {
     int n;
     cin >> n;
@@ -16,6 +21,10 @@ int main () {
             cin >> s;
             B.push_back(s);
         }
+        Matriu m;
+        m.push_back(A);
+        m.push_back(B);
         
+        cout << domino(m) << endl;
     }
 }
