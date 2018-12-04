@@ -9,7 +9,8 @@ vector<double> intersection(const vector<double>& v1, const vector<double>& v2) 
         if (v1[i] < v2[j]) ++i;
         else if (v1[i] > v2[j]) ++j;
         else {
-            if (v1[i] != v[(int)v.size()-1]) v.push_back(v1[i]);
+            if (i == 0) v.push_back(v1[i];
+            else if (v1[i] != v[(int)v.size()-1]) v.push_back(v1[i]);
             ++i;
             ++j;
         }
