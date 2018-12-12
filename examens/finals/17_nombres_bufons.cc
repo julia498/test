@@ -11,8 +11,7 @@ int prod_digits(int n) { //calcula el producle des digits del num
 }
 
 bool digits_seguits(int n) {
-    int anterior=n%10;
-    n /= 10;
+    int anterior = -1;
     while (n > 0) {
         if (n%10 == anterior) return true;
         anterior = n%10;
@@ -22,13 +21,13 @@ bool digits_seguits(int n) {
 }
 
 bool es_bufo(int n) { //ha de ser recursiva
-    if (digits_seguits(prod_digits(n))) return false;
-    if (n >= 0 and n < 10) return true;
+    if (digits_seguits(n)) return false;
+    if (n < 10) return true;
     return es_bufo(prod_digits(n));
 }
 
 int main() {
     int n;
-    cin >> n;
-    cout << es_bufo(n) << endl;
+    while (cin >> n)
+		cout << es_bufo(n) << endl;
 }
